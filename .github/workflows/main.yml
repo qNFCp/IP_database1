@@ -61,9 +61,10 @@ jobs:
         continue-on-error: true
         run: wget --timeout=30 --tries=3 https://github.com/lionsoul2014/ip2region/raw/master/data/ip2region_v4.xdb -O ip2region/ip2region_v4.xdb
 
-      - name: Update ip2region - IPv6
-        continue-on-error: true
-        run: wget --timeout=30 --tries=3 https://github.com/lionsoul2014/ip2region/raw/master/data/ip2region_v6.xdb -O ip2region/ip2region_v6.xdb
+      #  GitHub's file size limit is 100.00 MB; this file is larger than 600MB.
+      # - name: Update ip2region - IPv6
+      #   continue-on-error: true
+      #   run: wget --timeout=30 --tries=3 https://github.com/lionsoul2014/ip2region/raw/master/data/ip2region_v6.xdb -O ip2region/ip2region_v6.xdb
 
       - name: Update 17monipdb
         continue-on-error: true
